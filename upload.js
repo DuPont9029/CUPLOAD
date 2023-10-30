@@ -13,14 +13,14 @@ const s3_client = new S3Client({
     region: "eu-central-1",
 });
 
-const filePath = './hello.js';
+const filePath = './uploadfolder.js';
 const fileName = filePath.split('/').pop();
 
 ( async () => {
     const fileStream = fs.createReadStream(filePath);
 
     await s3_client.send(new PutObjectCommand({
-        Bucket: "websites",
+        Bucket: "animecdn",
         Key: fileName, // Use the extracted filename here
         Body: fileStream,
     }));

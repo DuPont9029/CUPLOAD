@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.433.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "progress": "^2.0.3"
   }
 }
